@@ -1,0 +1,43 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "openrouter": {
+      "options": {
+        "timeout": 600000,
+        "chunkTimeout": 30000
+      },
+      "models": {
+        "deepseek/deepseek-v4-pro": {},
+        "deepseek/deepseek-v4-flash": {},
+        "anthropic/claude-sonnet-4.6": {}
+      }
+    }
+  },
+  "model": "openrouter/deepseek/deepseek-v4-pro",
+  "small_model": "openrouter/deepseek/deepseek-v4-flash",
+  "agent": {
+    "build": {
+      "mode": "primary",
+      "model": "openrouter/deepseek/deepseek-v4-pro",
+      "permission": {
+        "edit": "ask",
+        "bash": "ask"
+      }
+    },
+    "plan": {
+      "mode": "primary",
+      "model": "openrouter/anthropic/claude-sonnet-4.6",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny"
+      }
+    }
+  },
+  "mcp": {
+    "chrome": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp"],
+      "enabled": true
+    }
+  }
+}
