@@ -9,10 +9,12 @@
       "models": {
         "deepseek/deepseek-v4-pro": {},
         "deepseek/deepseek-v4-flash": {},
-        "anthropic/claude-sonnet-4.6": {}
+        "anthropic/claude-sonnet-4.6": {},
+        "auto": {}
       }
     }
   },
+  "default_agent": "vibe-coding",
   "model": "openrouter/deepseek/deepseek-v4-pro",
   "small_model": "openrouter/deepseek/deepseek-v4-flash",
   "agent": {
@@ -22,6 +24,14 @@
       "permission": {
         "edit": "ask",
         "bash": "ask"
+      }
+    },
+    "vibe-coding": {
+      "mode": "primary",
+      "model": "openrouter/deepseek/deepseek-v4-pro",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow"
       }
     },
     "plan": {
