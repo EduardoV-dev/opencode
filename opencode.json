@@ -11,6 +11,14 @@
   },
   "model": "openai/gpt-5.6-terra",
   "small_model": "openai/gpt-5.6-luna",
+  "instructions": [
+    "~/.config/opencode/instructions/general/*.md"
+  ],
+  "skills": {
+    "paths": [
+      "~/.config/opencode/.agents/skills"
+    ]
+  },
   "agent": {
     "build": {
       "mode": "primary",

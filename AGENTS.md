@@ -1,7 +1,31 @@
+# Global Harness
+
+This directory contains personal defaults for every repository opened with
+OpenCode.
+
+- Apply `instructions/general/*.md` to every repository.
+- When a repository contains frontend code, inspect it and load the `frontend`
+  skill. When it contains backend code, inspect it and load the `backend` skill.
+  Full-stack repositories may need both. Each role skill selects the matching
+  technology reference after inspecting manifests, configuration, imports, and
+  existing source.
+- TypeScript and Biome guidance lives in the shared references consumed by both
+  role skills; do not load or create technology files under `instructions/`.
+- Load the `instruction-curator` skill only when the user explicitly asks to
+  remember, persist, add, remove, or update a rule in the instructions.
+- Follow repository-local instructions and established conventions when they
+  are more specific than these defaults.
+- Do not force a role or technology profile onto an unrelated repository.
+
 ## Skills: Available
 
 - **ponytail** — Load with `skill("ponytail")` at the start of every session.
 - **caveman** — Ultra-compressed communication. Load with `skill("caveman")`.
+- **frontend** — Load when repository inspection finds frontend code; selects the matching frontend
+  technology references.
+- **backend** — Load when repository inspection finds backend code; selects the matching backend
+  technology references.
+- **instruction-curator** — Load only for explicit persistent instruction updates.
 
 <!-- context7 -->
 Use Context7 MCP to fetch current documentation whenever the user asks about a library, framework, SDK, API, CLI tool, or cloud service — even well-known ones like React, Next.js, Prisma, Express, Tailwind, Django, or Spring Boot. This includes API syntax, configuration, version migration, library-specific debugging, setup instructions, and CLI tool usage. Use even when you think you know the answer — your training data may not reflect recent changes. Prefer this over web search for library docs.
