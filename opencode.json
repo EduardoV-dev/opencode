@@ -19,6 +19,11 @@
       "~/.config/opencode/.agents/skills"
     ]
   },
+  "permission": {
+    "external_directory": {
+      "~/.config/opencode/.agents/skills/shared/**": "allow"
+    }
+  },
   "agent": {
     "build": {
       "mode": "primary",
