@@ -8,6 +8,7 @@
   unrelated statements to evade it.
 - Keep code, tests, styles, constants, schemas, types, and utilities beside their narrowest owner.
 - Promote code to shared scope only after a real additional consumer exists.
+- Name authored files and directories in `kebab-case`, unless a language, framework, or tool requires another name.
 
 ## Functions And Naming
 
@@ -32,4 +33,5 @@
 - Follow the repository's configured formatter, linter, import ordering, and line-width rules.
 - Keep imports focused and remove unused symbols.
 - Match existing naming, quoting, indentation, and file naming conventions unless there is a clear
-  reason to improve them consistently.
+  reason to improve them consistently; authored files and directories still use `kebab-case` unless
+  a language, framework, or tool requires another name.

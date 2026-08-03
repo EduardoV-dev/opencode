@@ -4,6 +4,9 @@ Apply this reference only when the repository uses Astro.
 
 - Treat `src/pages` as the routing boundary. Keep pages and layouts thin and delegate feature logic
   to the owning module.
+- Place components used across multiple pages in `src/components`. Place page-specific sections and
+  their tests/configuration in `src/modules/<page>/<section>`, then import them from the owning page.
+  Use this architecture by default unless the repository explicitly specifies another one.
 - Prefer Astro's server-rendered or static HTML and add client-side islands only for real interactive
   behavior.
 - Keep browser scripts small and scoped to the island or feature that owns the interaction. Do not
